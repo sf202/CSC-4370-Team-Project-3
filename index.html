@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Project 3</title>
+		<link rel="stylesheet" href="./website.css">
+		<script type="text/javascript" src="fifteenPuzzle.js"></script>
+	</head>
+
+	<body>
+		<div id="victory-message" class="fullscreen-message" style="display: none;">
+			<img src="winner.jpg" alt="Win Image">
+		  </div>
+		  
+		<div id="wrapper">
+			<div id="header">
+			</div><!--id="header"-->
+
+			<div id="content">
+<!--#this is where you place the contents of your web page-->
+<div>
+	<h1> Fifteen Puzzle </h1>
+	<table id="table">
+	</table>
+	<br>
+	<br>
+	<label>Rows <input type="text" name="rows" id="rows" value="4" size="2"></label>
+	<label>Columns <input type="text" name="columns" id="columns" value="4" size="2"></label>
+	<input type="button" id="newGame" value="Start New Game">
+	<br>
+	<br>
+	Number Of Moves: <span id="moves">0</span>
+</div><!--content-->
+
+<!-- Add this button underneath the puzzle tiles -->
+<input type="button" id="shuffleButton" value="Shuffle" onclick="shuffleTiles()">
+<!-- Add this button in your HTML body section -->
+<input type="button" id="cheatButton" value="Cheat" onclick="cheat()">
+
+<div id="validate">
+	<a href="https://validator.w3.org/check?uri=referer">
+		<img src="w3c-html.png" alt="html validator">
+	</a><br>
+	<a href="https://jigsaw.w3.org/css-validator/">
+		<img src="w3c-css.png" alt="Valid CSS!"></a><br>
+	<a href="https://jshint.com/">
+		<img src="jshint-small.png" alt="JavaScript Lint">
+	</a>
+</div>
+
+
+<label for="backgroundSelect">Select Background:</label>
+<select id="backgroundSelect" onchange="changeBackground()">
+  <option value="background1.jpg">Background 1</option>
+  <option value="background2.jpg">Background 2</option>
+  <option value="background3.jpg">Background 3</option>
+  <option value="background4.jpg">Background 4</option>
+</select>
+	</body>
+</html>
